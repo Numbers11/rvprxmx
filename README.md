@@ -7,7 +7,7 @@ It is by no means extensively tested or finished, **caveat emptor**.
 
 Ideas, bug reports and patches are more than welcome.
 
-Simple usage
+Usage
 ------------
 
 It's really simple:
@@ -24,9 +24,9 @@ See how it makes a connection, open the specified HTTP service on your `/srv` ma
 Todo & Ideas
 ---------
 
-* TLS encryption for the tunnel connection
-+ Command line options for the client
-+ Stealth mode for the client
+* Reconnect option for client
++ security for the web service via auth and/or whitelist
++ connection throttle / flood control/bandwith usage
 
 
 License
