@@ -12,9 +12,11 @@ Usage
 
 It's really simple:
 
-1. Edit the `config.json` in `/srv`, execute `go build` in the directory and run.
+1. Install the dependencies with `go get https://github.com/armon/go-socks5` and `go get https://github.com/inconshreveable/muxado`
 
-2. Edit the `cln.go` in `/cln` accordingly, execute `go build` in the directory and run.
+2. Edit the `config.json` in `/srv`, execute `go build` in the directory and run.
+
+3. Edit the `cln.go` in `/cln` accordingly, execute `go build` in the directory and run.
 
 See how it makes a connection, open the specified HTTP service on your `/srv` machine
  to see a JSON representation of your client, then use a socks5 proxy software to connect
