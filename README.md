@@ -16,7 +16,7 @@ It's really simple:
 
 2. Edit the `config.json` in `/srv`, execute `go build` in the directory and run.
 
-3. Edit the `cln.go` in `/cln` accordingly, execute `go build` in the directory and run.
+3. execute `go build` in  `/cln` and run.
 
 See how it makes a connection, open the specified HTTP service on your `/srv` machine
  to see a JSON representation of your client, then use a socks5 proxy software to connect
