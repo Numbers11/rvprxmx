@@ -12,7 +12,7 @@ Usage
 
 It's really simple:
 
-1. Install the dependencies with `go get https://github.com/armon/go-socks5` and `go get https://github.com/inconshreveable/muxado`
+1. Install the dependencies with `go get github.com/armon/go-socks5` and `go get github.com/inconshreveable/muxado`
 
 2. Edit the `config.json` in `/srv`, execute `go build` in the directory and run.
 
@@ -29,6 +29,16 @@ Todo & Ideas
 * Reconnect option for client
 + security for the web service via auth and/or whitelist
 + connection throttle / flood control/bandwith usage
+
+Tested on
+---------
+- Server
+-- Debian 9
+-- Ubuntu Server
+
+- Client
+-- OSX High Sierra
+-- Debian 9
 
 
 License
