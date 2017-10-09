@@ -30,6 +30,16 @@ Todo & Ideas
 + security for the web service via auth and/or whitelist
 + connection throttle / flood control/bandwith usage
 
+Tested on
+---------
+- Server
+-- Debian 9
+-- Ubuntu Server
+
+- Client
+-- OSX High Sierra
+-- Debian 9
+
 
 License
 ------------
