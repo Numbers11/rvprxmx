@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net"
+	"crypto/tls"
 	"time"
 
 	"github.com/inconshreveable/muxado"
@@ -25,7 +26,16 @@ const banner = `
 
 //Listen create a listener and serve on it
 func listen() error {
-	l, err := net.Listen("tcp", ":"+cfg.CnCPort)
+	cer, err := tls.LoadX509KeyPair("server.crt", "server.key")
+	if err != nil {
+	        return err
+	}
+
+	tlsconfig := &tls.Config{Certificates: []tls.Certificate{cer}}
+
+	l, err := tls.Listen("tcp", ":"+cfg.CnCPort, tlsconfig)
+
+	//l, err := net.Listen("tcp", ":"+cfg.CnCPort)
 
 	if err != nil {
 		return err
