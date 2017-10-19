@@ -2,8 +2,7 @@ package main
 
 import (
 	"log"
-	"net"
-
+	"crypto/tls"
 	"fmt"
 	"os"
 
@@ -23,7 +22,11 @@ func main() {
 		panic(err)
 	}
 
-	conn, err := net.Dial("tcp", os.Args[1])
+	tlsconfig := &tls.Config{
+		 InsecureSkipVerify: true,
+	}
+
+	conn, err := tls.Dial("tcp", os.Args[1], tlsconfig)
 	if err != nil {
 		log.Println("Cannot connect to target: ", err)
 		os.Exit(0)
